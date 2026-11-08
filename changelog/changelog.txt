@@ -4,3 +4,15 @@ chanegs made on 03/10/26
 - made changes to README
 - added images to about us page 
 - changed the footer 
+POE submission 
+volunteer page 
+-added javascript form validation for details
+-added an error message if detials arent properly enterd 
+
+contactus html page 
+-replaced the embeded map with a leaflet map 
+-removed leftover map code 
+
+addtional 
+- added a hover feature for animations over the navigation and buttons 
+-added a FAQ section on the donate page 
