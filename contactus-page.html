@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""> <!--leafelet map - Ai was used for this line -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="javascript/map.js" defer></script>
@@ -12,7 +12,7 @@
     <style>
         .card {
             background-color: #ffffff;
-            border: 1px solid #e0e0e0;
+            border: 1px solid #e0e0e0; 
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -50,9 +50,9 @@
 
     <hr>
 
-    <!-- Main Content Area -->
+    <!-- Main -->
     <main>
-        <!-- Section Heading and contact details  -->
+        <!--  Heading and contact details  -->
         <section align="center">
             <h1>Contact Us</h1>
             <p>We would love to hear from you. Reach out to one of our office locations below or send us a message directly.<br>
@@ -62,7 +62,7 @@
 
         <hr>
 
-        <!-- Multiple Locations & Embedded Maps Section -->
+        <!--  Locations & leaflet map  -->
         <section>
             <h2>Our Offices</h2>
             
@@ -72,10 +72,14 @@
                      card 1 -->
                     <td width="50%" valign="top">
                         <div class="card">
-                            <h3>Head office - Durban</h3>
+                            <h3>Head office - Durban
+                                drop off office -westville
+                            </h3>
                             <p>1 link road <br>
                                 Westville, Durban, 3629<br> <!--westville office -->
                                 South Africa
+                                12 radar dr road 
+                                durban, 4001<br> <!--durban office -->
                             </p>
                             <p>
                                 <strong>Phone:</strong> 095 6765 123<br>
@@ -87,11 +91,7 @@
                                <div id="map"></div>
                             </section>
                             
-                            <!-- Google maps location of Bright Beginnings office -->
-                            <iframe 
-                                   <div id="map"></div> 
-                               
-                            </iframe>
+                            
                         </div>
                     </td>
 
@@ -126,7 +126,7 @@
                             <select id="location" name="location">
                                 <option value="durban">Durban Headquarters</option>
                                 <option value="westville">Westville Branch</option>
-                            </select>
+                            </select>//potential volunteer is able to select a preferred location to contact
                         </td>
                     </tr>
                     <tr>
