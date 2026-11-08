@@ -406,3 +406,71 @@ footer p {
     font-size: 0.95rem;
   }
 }
+
+/*  Hover animations plus glow on button */
+
+/* 1. Buttons:  */
+button,
+.btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+} /* claude was used for the trasition code */
+
+button:hover,
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #e0a44b;
+}
+
+button:active,
+.btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* 2. Navigation links: gold color  */
+nav a {
+    position: relative;
+    text-decoration: none;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 3px;
+    background-color: #e0a44b;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/*image zoom  */
+.zoom-img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.zoom-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* this is code should add a glow when clicked  */
+input,
+select,
+textarea{
+transistion: boarder color 0.3s ease, box-shadow 0.3s ease;
+} 
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #e0a44b;
+    box-shadow: 0 0 8px rgba(224, 164, 75, 0.6);
+    outline: none;
+}
