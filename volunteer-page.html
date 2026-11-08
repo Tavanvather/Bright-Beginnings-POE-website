@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO- title and meta description for this page  is below -->
+    <title>Volunteer in South Africa | Bright Beginnings</title>
+    <meta name="description" content="Volunteer with Bright Beginnings to help give South African children school supplies, food and a brighter future. Apply online today.">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- javascript required for the form validation and the form submission , this help to ensure that the forms are submmited corretly -->
+    <script src="javescript/volunteer.js" defer></script>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <table width="100%" border="0" cellpadding="10" cellspacing="0">
+            <tr>
+                <!-- Left: Branding and Horizontal Navigation -->
+                <td align="left" valign="middle">
+                    <strong>Bright Beginnings</strong>
+                    <nav style="display: inline;">
+                        <a href="home-page.html">Home</a> 
+                        <a href="aboutus-page.html">About Us</a> 
+                        <a href="donate-page.html">Donate</a> 
+                        <a href="contactus-page.html">Contact Us</a>
+                    </nav>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <hr>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Introduction -->
+        <section style="text-align: center;">
+            <h1>Volunteer at Bright Beginnings</h1>
+            <p>Make a direct impact in our community. Fill out the application form below to join our volunteer network to help make a 
+                difference and help give South African children a better future.</p>
+            
+            <!-- Image from root folder -->
+            <img src="_images/help.avif" alt="Volunteers at Bright Beginnings handing out food and school supplies" width="100%" style="max-width: 600px; height: auto;">
+        </section>
+
+        <hr>
+
+        <!-- Volunteer Application Form Section -->
+        <section style="text-align: center;">
+            <h2>Volunteer Application Form</h2>
+            
+            <!-- FLEXBOX CONTAINER: ensures centering -->
+            <div style="display: flex; justify-content: center; width: 100%;">
+                <!-- novalidate = JavaScript shows our own error messages instead of the browser's pop-ups -->
+                <form id="volunteer-form" action="#" method="post" novalidate>
+                    <table border="0" cellpadding="12" cellspacing="0" style="text-align: left; width: auto; margin: 0 auto;">
+                        <!-- Personal Information -->
+                        <tr>
+                            <td><label for="fullname">Full Name:</label></td>
+                            <td>
+                                <input type="text" id="fullname" name="fullname" required minlength="2" maxlength="60"
+                                       pattern="[A-Za-z][A-Za-z '\-]{1,59}"
+                                       title="Letters, spaces, hyphens and apostrophes only">
+                                <span id="fullname-error" class="error-msg" style="color: #b00020; display: block; font-size: 0.9em;"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email Address:</label></td>
+                            <td>
+                                <input type="email" id="email" name="email" required maxlength="100">
+                                <span id="email-error" class="error-msg" style="color: #b00020; display: block; font-size: 0.9em;"></span>
+                            </td>
+                        </tr>
+            
+                     <tr>
+                            <td><label for="phone">Phone Number:</label></td>
+                            <td>
+                                <input type="tel" id="phone" name="phone" required placeholder="0821234567"
+                                       pattern="(\+27|0)[0-9]{9}"
+                                       title="South African number, e.g. 0821234567 or +27821234567">
+                                <span id="phone-error" class="error-msg" style="color: #b00020; display: block; font-size: 0.9em;"></span>
+                            </td>
+                        </tr>
+
+                        <!-- Areas of Interest -->
+                        <tr>
+                            <td><label for="interest">Area of Interest:</label></td> <!--this allows the colunteers to select whhat they would like to help with -->
+                            <td>
+                                <select id="interest" name="interest" required>
+                                    <option value="">-- Select an Option --</option>
+                                    <option value="food-distribution">Food Distribution</option>
+                                    <option value="tutoring">Educational Support</option>
+                                    <option value="events">Ground Work</option>
+                                    <option value="admin">Admin 
+                                    </option>
+                                </select>
+                                <span id="interest-error" class="error-msg" style="color: #b00020; display: block; font-size: 0.9em;"></span>
+                            </td>
+                        </tr>
+
+                        <!-- Availability -->
+                         <!--this will the volunteers  and npo with time slots for volunteer work -->
+                        <tr>
+                            <td valign="top"><label>Availability:</label></td>
+                            <td>
+                                <input type="checkbox" id="weekdays" name="availability" value="weekdays">
+                                <label for="weekdays">Weekdays</label><br>
+                                <input type="checkbox" id="weekends" name="availability" value="weekends">
+                                <label for="weekends">Weekends</label><br>
+                                <span id="availability-error" class="error-msg" style="color: #b00020; display: block; font-size: 0.9em;"></span>
+                            </td><!--had issues and errors with this - used claude to help debug and fix the issue -->
+                        </tr>
+
+                        <!-- Submit -->
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button type="submit">Submit Application</button>
+                                <button type="reset">Clear Form</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+            <!-- The response message is shown here after a valid submission -->
+            <div id="form-response" role="status" aria-live="polite" style="margin-top: 20px;"></div>
+        </section>
+    </main>
+
+    <hr>
+
+       <footer style="text-align: center; padding: 20px; background-color: #1a6708;">
+        <p>&copy; 2026 Bright Beginnings. All rights reserved.</p>
+    </footer>
+      </body>
+    </html>

@@ -1,0 +1,408 @@
+/*
+   VARIABLES
+*/
+body {
+  --primary: #2f4b3c;
+  --secondary: #6b4226;
+  --accent: #e8a33d;
+  --accent-dark: #c8822a;
+  --bg: #faf3e0;
+  --card-bg: #fffdf7;
+  --border: #ddd2b8;
+  --text: #2b2b2b;
+  --text-muted: #6b6459;
+  --font-main: 'Segoe UI', Roboto, sans-serif;
+  --font-heading: Georgia, 'Times New Roman', serif;
+  --radius: 4px;
+  --transition: 0.2s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  margin: 0;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--primary);
+  margin-top: 0;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.1rem;
+  margin-bottom: 0.75rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 3px solid var(--accent);
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+h3 {
+  font-size: 1.15rem;
+  color: var(--secondary);
+}
+
+p {
+  color: var(--text);
+  max-width: 70ch;
+}
+
+section[align="center"] p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  width: 85%;
+  margin: 2rem auto;
+}
+
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem 2rem;
+}
+
+main section {
+  padding: 1rem 0;
+}
+
+/*
+   HEADER & NAVIGATION
+*/
+header {
+  background-color: var(--primary);
+}
+
+header table,
+header tbody,
+header tr {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header td {
+  display: block;
+  padding: 1rem 2rem;
+}
+
+header strong {
+  color: #fdf8ec;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  letter-spacing: 0.3px;
+}
+
+header nav {
+  margin-left: 1.5rem;
+}
+
+header nav a {
+  color: #d8e3d9;
+  font-weight: 600;
+  margin-right: 1.25rem;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+header nav a:hover {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  text-decoration: none;
+}
+
+header + hr {
+  display: none;
+}
+
+/*
+   BUTTONS
+*/
+button {
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 10px 22px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  background-color: var(--accent);
+  color: #fff;
+  transition: background-color var(--transition);
+}
+
+button:hover {
+  background-color: var(--accent-dark);
+}
+
+button[type="reset"] {
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--border);
+  margin-left: 0.5rem;
+}
+
+button[type="reset"]:hover {
+  background-color: var(--border);
+}
+
+header button {
+  margin-left: 0.5rem;
+}
+
+/*
+   CARDS
+   (form, banking table, office cards — a colored left border
+   instead of rounded corners + drop shadow)
+*/
+form {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--accent);
+  border-radius: var(--radius);
+}
+
+main table[border="1"] {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--accent);
+  border-radius: var(--radius);
+}
+
+.office-grid td[valign="top"] {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  width: 100%;
+}
+
+figure img {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* Office Grid Section */
+.office-grid,
+.office-grid tbody,
+.office-grid tr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+/* claude was used for grid styling code */
+
+/* Figures */
+figure {
+  margin: 1.5rem auto;
+  max-width: 500px;
+}
+
+figcaption {
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 0.6rem;
+}
+
+/*
+   FORMS WITH INPUTS
+*/
+form {
+  padding: 1.5rem;
+  max-width: 560px;
+}
+
+form table {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+}
+
+form td {
+  padding: 10px 8px;
+  vertical-align: middle;
+}
+
+form label {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--font-main);
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+input[type="checkbox"] {
+  accent-color: var(--accent);
+  margin-right: 6px;
+}
+
+/*
+   TABLES
+*/
+main table[border="1"] {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+main table[border="1"] td {
+  border: 1px solid var(--border);
+  padding: 12px;
+}
+
+main table[border="1"] tr td:first-child {
+  background-color: #f1ead4;
+  width: 220px;
+}
+
+iframe {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+footer {
+  background-color: var(--primary);
+  color: #b5a124;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+  max-width: none;
+  color: inherit
+
+}
+
+/*
+   RESPONSIVE DESIGN and MEDIA QUERIES
+*/
+@media (max-width: 768px) {
+  header table,
+  header tbody,
+  header tr {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header td {
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+  }
+
+  header nav a {
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+
+  .office-grid,
+  .office-grid tbody,
+  .office-grid tr {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  form table,
+  form tbody,
+  form tr,
+  form td {
+    display: block;
+    width: 100%;
+  }
+
+  main table[border="1"],
+  main table[border="1"] tbody,
+  main table[border="1"] tr,
+  main table[border="1"] td {
+    display: block;
+    width: 100%;
+  }
+
+  form td {
+    padding: 6px 0;
+  }
+
+  main table[border="1"] tr td:first-child {
+    background-color: #f1ead4;
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  iframe {
+    width: 100%;
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Bright Beginings</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <table width="100%" border="0" cellpadding="10" cellspacing="0">
+            <tr>
+                <!-- Left: Branding and Horizontal Navigation -->
+                <td align="left" valign="middle">
+                    <strong>Bright Beginings</strong>
+                    
+                    <nav style="display: inline;">
+                        <a href="home-page.html">Home</a> 
+                        <a href="aboutus-page.html">About Us</a>
+                        <a href="volunteer-page.html">Volunteer</a> 
+                        <a href="donate-page.html">Donate</a>
+                        <a href="contactus-page.html">Contact Us</a>
+                    </nav>
+                    <!--navigation links -->
+                </td>
+                
+                <!-- Right: Call to Action Controls -->
+                <td align="right" valign="middle">
+                    <a href="enquiry-page.html"><button type="button">Get Involved</button></a>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <hr>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Section Heading and contact details  -->
+        <section align="center">
+            <h1>Contact Us</h1>
+            <p>We would love to hear from you. Reach out to one of our office locations below or send us a message directly.<br>
+                Contact Number: 095 6765 123 | Email: Brightbeginnings@gmail.com
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- Multiple Locations & Embedded Maps Section -->
+        <section>
+            <h2>Our Offices</h2>
+            
+            <table width="100%" border="0" cellpadding="10" cellspacing="0">
+                <tr>
+                    <!-- Location 1 : Primary Office 
+                     card 1 -->
+                    <td width="50%" valign="top">
+                        <div class="card">
+                            <h3>Head office - Durban</h3>
+                            <p>1 link road <br>
+                                Westville, Durban, 3629<br>
+                                South Africa
+                            </p>
+                            <p>
+                                <strong>Phone:</strong> 095 6765 123<br>
+                                <strong>Email:</strong> brightbeginnings@gmail.com
+                            </p>
+                            
+                            <!-- Google maps location of Bright Beginnings office -->
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.893604989922!2d30.9248004!3d-29.838492700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef700415437ea0b%3A0x7873410d32a8fa7!2sWestville%20Country%20Club!5e0!3m2!1sen!2sza!4v1788277501103!5m2!1sen!2sza" 
+                                width="100%" 
+                                height="220" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                    </td>
+
+                    <!-- Location 2 , Admin Office
+                     card 2 -->
+                    <td width="50%" valign="top">
+                        <div class="card">
+                            <h3>Admin office - Westville</h3>
+                            <p>
+                                45 Community Road, Block B<br>
+                                Westville, Durban, 3629<br>
+                                South Africa
+                            </p>
+                            <p>
+                                <strong>Phone:</strong> +27 95 6765 123<br>
+                                <strong>Email:</strong> brightbeginnings@gmail.com
+                            </p>
+
+                            <!-- Location 2 Google Map -->
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3462.33425435757!2d31.0341148!3d-29.7968863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef707aa871594bd%3A0x34e24a677ce3276a!2sRiverside%20Sports%20and%20Riverside%20Hockey%20Club!5e0!3m2!1sen!2sza!4v1788278599742!5m2!1sen!2sza" 
+                                width="100%" 
+                                height="220" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- General Contact Form -->
+        <section>
+            <h2>Send Us a Direct Message</h2>
+            
+            <form action="#" method="post">
+                <table border="0" cellpadding="8" cellspacing="0">
+                    <tr>
+                        <td><label for="fullname">Full Name:</label></td>
+                        <td><input type="text" id="fullname" name="fullname" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email Address:</label></td>
+                        <td><input type="email" id="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">Phone Number:</label></td>
+                        <td><input type="tel" id="phone" name="phone"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="location">Location:</label></td>
+                        <td>
+                            <select id="location" name="location">
+                                <option value="durban">Durban Headquarters</option>
+                                <option value="westville">Westville Branch</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="subject">Subject:</label></td>
+                        <td><input type="text" id="subject" name="subject" required></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="submit">Send Message</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <!-- Page Footer -->
+    <footer align="center">
+        <p>&copy; 2026 Bright Beginings. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+chanegs made on 03/10/26
+- added stylesheet in css with comments
+- made changes to my html pages and improved comments 
+- made changes to README
+- added images to about us page 
+- changed the footer 
