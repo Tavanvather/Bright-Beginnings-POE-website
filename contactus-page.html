@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="javascript/map.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Bright Beginings</title>
@@ -64,59 +68,35 @@
             
             <table width="100%" border="0" cellpadding="10" cellspacing="0">
                 <tr>
-                    <!-- Location 1 : Primary Office 
+                    <!-- Location 1 : durban office
                      card 1 -->
                     <td width="50%" valign="top">
                         <div class="card">
                             <h3>Head office - Durban</h3>
                             <p>1 link road <br>
-                                Westville, Durban, 3629<br>
+                                Westville, Durban, 3629<br> <!--westville office -->
                                 South Africa
                             </p>
                             <p>
                                 <strong>Phone:</strong> 095 6765 123<br>
                                 <strong>Email:</strong> brightbeginnings@gmail.com
                             </p>
+                            <section style="text-align: center;">
+                            <h2>Find Us</h2>
+                              <p>Visit one of our drop-off points to donate school supplies and food.</p>
+                               <div id="map"></div>
+                            </section>
                             
                             <!-- Google maps location of Bright Beginnings office -->
                             <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.893604989922!2d30.9248004!3d-29.838492700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef700415437ea0b%3A0x7873410d32a8fa7!2sWestville%20Country%20Club!5e0!3m2!1sen!2sza!4v1788277501103!5m2!1sen!2sza" 
-                                width="100%" 
-                                height="220" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy">
+                                   <div id="map"></div> 
+                               
                             </iframe>
                         </div>
                     </td>
 
-                    <!-- Location 2 , Admin Office
-                     card 2 -->
-                    <td width="50%" valign="top">
-                        <div class="card">
-                            <h3>Admin office - Westville</h3>
-                            <p>
-                                45 Community Road, Block B<br>
-                                Westville, Durban, 3629<br>
-                                South Africa
-                            </p>
-                            <p>
-                                <strong>Phone:</strong> +27 95 6765 123<br>
-                                <strong>Email:</strong> brightbeginnings@gmail.com
-                            </p>
-
-                            <!-- Location 2 Google Map -->
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3462.33425435757!2d31.0341148!3d-29.7968863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef707aa871594bd%3A0x34e24a677ce3276a!2sRiverside%20Sports%20and%20Riverside%20Hockey%20Club!5e0!3m2!1sen!2sza!4v1788278599742!5m2!1sen!2sza" 
-                                width="100%" 
-                                height="220" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy">
-                            </iframe>
-                        </div>
-                    </td>
-                </tr>
+                    
+                
             </table>
         </section>
 
