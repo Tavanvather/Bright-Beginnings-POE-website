@@ -4,9 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | [Bright Beginnings]</title>
-<meta name="description" content="welcome to bright beginnings, we are a non-profit that helps children in need .">
+    <meta name="description" content="welcome to bright beginnings, we are a non-profit that helps children in need .">
     <link rel="stylesheet" href="css/style.css">
     <!-- link to stylesheet -->
+
+    <!-- Lightbox Inline Styles -->
+    <style>
+      .lightbox-modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .lightbox-modal.active {
+        display: flex;
+      }
+      .lightbox-content {
+        max-width: 85%;
+        max-height: 80vh;
+        border-radius: 6px;
+      }
+      .lightbox-caption {
+        color: #fff;
+        margin-top: 15px;
+        font-size: 1.1rem;
+        text-align: center;
+      }
+      .lightbox-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .lightbox-trigger {
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+      .lightbox-trigger:hover {
+        transform: scale(1.02);
+      }
+    </style>
 </head>
 <body>
 
@@ -41,7 +88,8 @@
             <h1>Giving Every Child a Fair Start</h1>
             
             <figure>
-                <img src="/_images/smile.png" alt="Children supported by our educational and nutrition programs smiling" width="500">
+                <!-- Added class="lightbox-trigger" so clicking the image opens the lightbox -->
+                <img src="/_images/smile.png" alt="Children supported by our educational and nutrition programs smiling" width="500" class="lightbox-trigger">
                 <figcaption>Empowering local youth through nutrition and school supply distribution. you can help by a simple donation of any size .
                   If you are unable to donate , but are able to give your time and help us change the future of south Africa.
                 </figcaption>
@@ -59,6 +107,51 @@
     </main>
 
     <hr>
+
+    <!-- Lightbox code -->
+     <!-- used w3chools.com to help with the code for lightbox -->
+    <div id="lightbox" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="">
+        <div id="lightbox-caption" class="lightbox-caption"></div> 
+    </div>
+
+    <!--  java script logic -->
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const triggers = document.querySelectorAll('.lightbox-trigger');
+        const closeBtn = document.querySelector('.lightbox-close');
+
+        // Open Lightbox when an image is clicked
+        triggers.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.classList.add('active');
+                lightboxImg.src = img.src;
+                lightboxCaption.textContent = img.alt;
+            });
+        });
+
+       // coses when users clicks the x 
+        closeBtn.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        // Close Lightbox when clicking anywhere outside the image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+            }
+        });
+
+        // Close Lightbox when pressing the Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
 
     <footer align="center">
         <p>&copy; 2026 [Bright Beginnings]. All rights reserved.</p>
