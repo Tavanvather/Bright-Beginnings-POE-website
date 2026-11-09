@@ -33,6 +33,11 @@ Contact us page -
 <img width="2812" height="1538" alt="image" src="https://github.com/user-attachments/assets/c32986c8-fbcd-4cc5-8a24-cadf3db9a50b" />
 <img width="2940" height="1418" alt="image" src="https://github.com/user-attachments/assets/2acb703b-b4ac-4318-9169-403cdae936bf" />
 
+## 🚀 How to Run Locally
+1. Clone this repository to your local machine.
+2. Open the project folder in **VS Code**.
+3. Open `home-page.html` with the **Live Server** extension to view the site.
+
 
 
 Website goals and objectives
@@ -67,7 +72,7 @@ refrences
 - added stylesheet in CSS with comments
 - made changes to my HTML pages and improved comments 
 - made changes to README
-- added images to about us page 
+- added images to the About Us page 
 - changed the footer 
 POE submission
 Changes made on 09/11/26
@@ -88,7 +93,7 @@ Home page HTML
 
 # GitHub repos 
 main repo -https://github.com/EMKNDW/wede5020-g2-2026-summative-1-portfolio-of-evidence-tavanvather.git
-personal repo - https://github.com/Tavanvather/Bright-Beginnings-POE-website.git
+Personal repo - https://github.com/Tavanvather/Bright-Beginnings-POE-website.git
 
 Netlify link - https://bright-beginnings-poe.netlify.app
   
